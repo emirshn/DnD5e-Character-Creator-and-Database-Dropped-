@@ -1,0 +1,123 @@
+  <div>
+      <v-container>
+        <v-row>
+          <v-col cols="6" v-for="(file, f) in characterImages" :key="f">
+            <v-list-item>
+              <img
+                :ref="'file'"
+                src="//placehold.it/400/99cc77"
+                class="img-fluid rounded-circle"
+                height="300"
+                weight="300"
+              />
+            </v-list-item>
+          </v-col>
+          <v-divider class="ms-3" inset vertical></v-divider>
+          <v-row class="">
+            <v-col cols="15">
+              <h2 class="font-italic text-h4 pa-2 ma-2">{{ characterName }}</h2>
+              <v-divider class="ms-3" inset></v-divider>
+              <v-row>
+                <v-col cols="4">
+                  <h2 class="font-italic text-h6 pa-2 ma-2 pl-10">
+                    {{ gender }}
+                  </h2>
+                </v-col>
+                <v-divider class="ms-4" inset vertical></v-divider>
+                <v-col cols="6">
+                  <h2 class="font-italic text-h6 pa-2 ma-2 pl-10">
+                    {{ selectedBackground.name }}
+                  </h2>
+                </v-col>
+              </v-row>
+              <v-divider class="ms-3" inset></v-divider>
+              <v-row no-gutters class="">
+                <v-divider class="ms-3" inset></v-divider>
+                <v-col cols="4">
+                  <h2 class="font-italic text-subtitle-1 pa-2 ma-2">
+                    {{ selectedRace.name }}
+                  </h2>
+                </v-col>
+                <v-divider class="ms-4" inset vertical></v-divider>
+                <v-col cols="6">
+                  <h2 class="font-italic text-subtitle-1 pa-2 ma-2">
+                    {{ selectedSubrace.name }}
+                  </h2>
+                </v-col>
+                <v-divider class="ms-3" inset></v-divider>
+              </v-row>
+              <v-row no-gutters class="">
+                <v-divider class="ms-3" inset></v-divider>
+
+                <v-col cols="4">
+                  <h2 class="font-italic text-subtitle-1 pa-2 ma-2">
+                    {{ selectedClass.name }}
+                  </h2>
+                </v-col>
+                <v-divider class="ms-4" inset vertical></v-divider>
+                <v-col cols="6">
+                  <h2 class="font-italic text-subtitle-1 pa-2 ma-2">
+                    {{ selectedSubclass.name }}
+                  </h2>
+                </v-col>
+                <v-divider class="ms-3" inset></v-divider>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-row>
+        <v-divider class="ms-3" inset></v-divider>
+        <h2 class="font-italic text-h4 pa-2 ma-2">Personality</h2>
+        <v-divider class="ms-3" inset></v-divider>
+        <v-list lines="one">
+          <v-list-item
+            v-for="item in personality"
+            :key="item"
+            :title="item"
+            subtitle="..."
+          ></v-list-item>
+        </v-list>
+        <v-divider class="ms-3" inset></v-divider>
+      </v-container>
+    </div>
+    <div>
+      <v-container>
+        <v-row class="pt-1" no-gutters>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.str }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Strength</h2>
+          </v-col>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.dex }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Dexterity</h2>
+          </v-col>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.con }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Constitution</h2>
+          </v-col>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.int }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Intelligence</h2>
+          </v-col>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.wis }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Wisdom</h2>
+          </v-col>
+          <v-col cols="2" class="px-3">
+            <v-img height="100px" width="150px" :src="d20logo.sample">
+              <h4 class="pt-11">{{ characterStats.cha }}</h4></v-img
+            >
+            <h2 class="text-subtitle-1">Charisma</h2>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
