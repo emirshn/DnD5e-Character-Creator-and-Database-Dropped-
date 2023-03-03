@@ -11,6 +11,7 @@ npm run serve
 Also users needs to change firebase.js and character actions.js files with their firebase or another database links.
 
 # Features (If it was completed)
+Note: Sorry for designs. They are too bad because i didnt focused on them.
 ## Character Creation Tool
 ### This page is basically a giant form, users can create their characters without selecting spells.
 ![image](https://user-images.githubusercontent.com/64266261/222800064-4e54cf18-fee8-4c2b-8202-0ef2add48152.png)
